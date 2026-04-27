@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUBG</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a0033, #0b0014, #05000a);
+    color: white;
+}
+
+.header {
+    background: linear-gradient(90deg, #0b0014, #2a004d, #0b0014);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 22px;
+    border-bottom: 1px solid rgba(242,169,0,0.2);
+}
+
+.header img {
+    height: 60px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #f2a900;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(30,0,50,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(242,169,0,0.1);
+    flex-wrap: wrap;
+}
+
+button {
+    background: #f2a900;
+    border: none;
+    padding: 10px 18px;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #ffcc33;
+    transform: scale(1.08);
+}
+
+.page {
+    display: none;
+    animation: fade 0.3s ease;
+}
+
+.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.container {
+    padding: 30px;
+    max-width: 950px;
+    margin: auto;
+}
+
+h2 {
+    color: #f2a900;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(242,169,0,0.15);
+    border-radius: 14px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.25s;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: scale(1.06);
+    border-color: #f2a900;
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="C:\Users\cools\HTML CLASS WORKOUTS\assessment 2\Purple star on dark gradient backdrop.png">
+    <div>
+        <h1>PUBG</h1>
+        <p style="margin:0; font-size:12px; color:#ccc;">Survive • Loot • Dominate</p>
+    </div>
+</div>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('guns')">Weapons</button>
+    <button onclick="showPage('maps')">Maps</button>
+    <button onclick="showPage('tips')">Tips</button>
+</nav>
+
+<div class="container">
+
+<div id="home" class="page active">
+    <h2>Welcome to PUBG Battlegrounds</h2>
+    <p>
+        Welcome to a high-intensity survival battlefield where only the smartest and strongest players survive. Drop into massive maps filled with danger, loot, and real enemy players. Start with nothing, explore buildings, collect weapons, and fight your way through shrinking zones until only one player or team remains.
+    </p>
+    <p>
+        Every match is unpredictable. You must adapt quickly, rotate smartly, and always stay aware of your surroundings. Gunshots can come from anywhere, and every decision matters. PUBG is not just a shooting game — it is a test of survival, strategy, and pressure control.
+    </p>
+</div>
+
+<div id="about" class="page">
+    <h2>About PUBG</h2>
+    <p>
+        PUBG is a tactical battle royale experience where 100 players fight for survival on large dynamic maps. Players must loot weapons, armor, and supplies while staying inside a shrinking safe zone that forces constant movement and combat.
+    </p>
+    <p>
+        The game rewards strategy more than aggression. Positioning, timing, sound awareness, and teamwork are key to winning matches. Whether playing solo, duo, or squad, every decision affects your survival. One mistake can eliminate you instantly, while smart plays lead to victory.
+    </p>
+</div>
+
+<div id="guns" class="page">
+    <h2>Weapons</h2>
+
+    <p>
+        These are some of the most famous weapons in PUBG Battlegrounds, known for shaping the battlefield meta. Each weapon has its own role, from close-range dominance to long-range precision.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m416.webp">
+            <p>M416 - Balanced assault rifle</p>
+        </div>
+
+        <div class="card">
+            <img src="https://prod.assets.earlygamecdn.com/images/AKMPubgMobile-Banner.jpg?transform=Article+Webp">
+            <p>AKM - High damage, strong recoil</p>
+        </div>
+
+        <div class="card">
+            <img src="https://zilliongamer.com/uploads/pubg-mobile/all-rifle/sniper-rifle/awm/awm.jpg">
+            <p>AWM - One-shot sniper rifle</p>
+        </div>
+
+        <div class="card">
+            <img src="https://img.altema.jp/pubg/uploads/2019/06/2019y06m12d_1740222007.PNG">
+            <p>UMP45 - Fast and stable SMG</p>
+        </div>
+    </div>
+</div>
+
+<div id="maps" class="page">
+    <h2>Maps</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://zilliongamer.com/uploads/pubg-mobile/map-location-information/pubg-mobile-erangel.jpg">
+            <p>Erangel - Balanced classic battlefield</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.hayInHV0e39nX66MvpNzlQHaHa?pid=Api&h=220&P=0">
+            <p>Miramar - Long range desert combat</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.h_E0FTEaBqtql15eo27QYQHaEU?pid=Api&h=220&P=0">
+            <p>Sanhok - Fast jungle fights</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.7WP3lOL9n6T9veVFAKpU5QHaHa?pid=Api&h=220&P=0">
+            <p>Vikendi - Snow survival map</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn2.unrealengine.com/pubg-battlegrounds-rondo-map-2-1070x1070-ac607cfc0bd0.png">
+            <p>Rondo - Modern city combat zones</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.topuplive.com/uploads/images/goods/20250503/1746210757_YJL1OdzVYy.jpg">
+            <p>Livik - Quick 15-minute matches</p>
+        </div>
+
+    </div>
+</div>
+
+<div id="tips" class="page">
+    <h2>Tips</h2>
+    <ul>
+        <li>Stay inside the safe zone</li>
+        <li>Use headphones for footsteps</li>
+        <li>Play smart instead of rushing</li>
+        <li>Loot fast and rotate early</li>
+    </ul>
+</div>
+
+</div>
+
+<script>
+function showPage(id) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
