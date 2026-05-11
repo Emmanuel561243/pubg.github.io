@@ -55,10 +55,12 @@ button {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
     background: #ffcc33;
+    transform: scale(1.05);
 }
 
 .page {
@@ -80,26 +82,27 @@ button:hover {
 }
 
 .container {
-    max-width: 950px;
+    max-width: 1000px;
     margin: auto;
     padding: 30px;
 }
 
 h2 {
     color: #f2a900;
+    margin-bottom: 10px;
 }
 
 .grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .card {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(242,169,0,0.15);
     border-radius: 14px;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     transition: 0.25s;
 }
@@ -107,13 +110,37 @@ h2 {
 .card:hover {
     transform: scale(1.06);
     border-color: #f2a900;
+    box-shadow: 0 0 15px rgba(242,169,0,0.3);
 }
 
 .card img {
     width: 100%;
-    height: 130px;
+    height: 140px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.card h3 {
+    color: #f2a900;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.welcome-box {
+    background: rgba(0,0,0,0.55);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 700px;
+    border: 1px solid rgba(242,169,0,0.2);
+}
+
+ul li {
+    margin-bottom: 12px;
 }
 </style>
 </head>
@@ -122,106 +149,166 @@ h2 {
 
 <div class="header">
 
-    <!-- 🔥 LOGO (CLICKABLE → GOES BACK TO HOME) -->
-    <a href="#" onclick="showPage('home')">
-        <img src="C:\Users\CooL_KiDS\Downloads\Purple star on dark gradient backdrop.png" alt="PUBG Logo">
-    </a>
+<a href="#" onclick="showPage('home')">
+<img src="C:\Users\CooL_KiDS\Downloads\Purple star on dark gradient backdrop.png" alt="PUBG Logo">
+</a>
 
-    <div>
-        <h1>PUBG</h1>
-        <p>Survive • Loot • Dominate</p>
-    </div>
+<div>
+<h1>PUBG</h1>
+<p>Survive • Loot • Dominate</p>
+</div>
+
 </div>
 
 <nav>
-    <button onclick="showPage('home')">Home</button>
-    <button onclick="showPage('about')">About</button>
-    <button onclick="showPage('guns')">Weapons</button>
-    <button onclick="showPage('maps')">Maps</button>
-    <button onclick="showPage('tips')">Tips</button>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('guns')">Weapons</button>
+<button onclick="showPage('maps')">Maps</button>
+<button onclick="showPage('tips')">Tips</button>
 </nav>
 
-<!-- HOME -->
 <div id="home" class="page active">
-    <div class="container">
-        <h2>Welcome to PUBG Battlegrounds</h2>
-        <p>Drop into a battlefield where only the strongest survive.</p>
-    </div>
+<div class="container">
+
+<div class="welcome-box">
+<h2>Welcome to PUBG Battlegrounds</h2>
+
+<p>
+PUBG Battlegrounds is one of the most popular battle royale games in the world where players are dropped onto massive maps and fight to become the last survivor. Every match is full of action, strategy, and intense moments as players search for weapons, armor, and supplies while the safe zone slowly becomes smaller.
+</p>
+
+<p>
+Whether you enjoy aggressive gameplay, tactical rotations, or long-range sniper fights, PUBG offers a unique experience every match. Team up with friends, survive enemy squads, and test your skills across different maps filled with danger and excitement.
+</p>
+
+<p>
+Land fast, loot smarter, survive longer, and fight your way to the legendary Chicken Dinner.
+</p>
+
+</div>
+
+</div>
 </div>
 
 <div class="container">
 
-<!-- ABOUT -->
 <div id="about" class="page">
-    <h2>About PUBG</h2>
-    <p>PUBG is a battle royale game where survival depends on strategy, skill, and awareness.</p>
+<h2>About PUBG</h2>
+
+<p>
+PUBG, also known as PlayerUnknown's Battlegrounds, is a multiplayer battle royale game developed around survival, strategy, and skill-based combat. Players enter a large battlefield with up to 100 competitors and must scavenge for weapons, medical items, armor, and vehicles while fighting to stay alive.
+</p>
+
+<p>
+The game became famous for its realistic gunplay, intense gameplay, and unpredictable matches where every decision matters. PUBG features a variety of maps with different environments including forests, deserts, snowy mountains, and tropical jungles. Each map changes the way players approach combat and movement.
+</p>
+
+<p>
+PUBG also offers solo, duo, and squad game modes, allowing players to compete alone or with teammates. Communication, positioning, and teamwork are important factors that help players survive until the final circle. With regular updates, new weapons, skins, vehicles, and events, PUBG continues to remain one of the biggest battle royale games worldwide.
+</p>
 </div>
 
-<!-- WEAPONS -->
 <div id="guns" class="page">
-    <h2>Weapons</h2>
+<h2>Weapons</h2>
 
-    <div class="grid">
-        <div class="card">
-            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m416.webp">
-            <p>M416</p>
-        </div>
-        <div class="card">
-            <img src="https://prod.assets.earlygamecdn.com/images/AKMPubgMobile-Banner.jpg?transform=Article+Webp">
-            <p>AKM</p>
-        </div>
-        <div class="card">
-            <img src="https://zilliongamer.com/uploads/pubg-mobile/all-rifle/sniper-rifle/awm/awm.jpg">
-            <p>AWM</p>
-        </div>
-        <div class="card">
-            <img src="https://img.altema.jp/pubg/uploads/2019/06/2019y06m12d_1740222007.PNG">
-            <p>UMP45</p>
-        </div>
-    </div>
+<div class="grid">
+
+<div class="card">
+<img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m416.webp">
+<h3>M416</h3>
+<p>
+The M416 is one of the most balanced and reliable assault rifles in PUBG. It has low recoil, fast fire rate, and excellent attachment support, making it a favorite weapon for close and medium-range combat.
+</p>
 </div>
 
-<!-- MAPS -->
+<div class="card">
+<img src="https://prod.assets.earlygamecdn.com/images/AKMPubgMobile-Banner.jpg?transform=Article+Webp">
+<h3>AKM</h3>
+<p>
+The AKM is a powerful assault rifle that uses 7.62 ammo and deals heavy damage. Although its recoil is stronger, experienced players use it for aggressive fights and quick eliminations.
+</p>
+</div>
+
+<div class="card">
+<img src="https://zilliongamer.com/uploads/pubg-mobile/all-rifle/sniper-rifle/awm/awm.jpg">
+<h3>AWM</h3>
+<p>
+The AWM is the strongest sniper rifle in PUBG and can knock enemies with a single headshot even with high-level helmets. It is rare and only found inside special airdrops.
+</p>
+</div>
+
+<div class="card">
+<img src="https://img.altema.jp/pubg/uploads/2019/06/2019y06m12d_1740222007.PNG">
+<h3>UMP45</h3>
+<p>
+The UMP45 is an SMG known for its stability and easy recoil control. It performs very well in close-range battles and is commonly used during early and mid-game fights.
+</p>
+</div>
+
+</div>
+</div>
+
 <div id="maps" class="page">
-    <h2>Maps</h2>
+<h2>Maps</h2>
 
-    <div class="grid">
-        <div class="card">
-            <img src="https://zilliongamer.com/uploads/pubg-mobile/map-location-information/pubg-mobile-erangel.jpg">
-            <p>Erangel</p>
-        </div>
-        <div class="card">
-            <img src="https://tse1.mm.bing.net/th/id/OIP.hayInHV0e39nX66MvpNzlQHaHa?pid=Api&h=220&P=0">
-            <p>Miramar</p>
-        </div>
-        <div class="card">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.h_E0FTEaBqtql15eo27QYQHaEU?pid=Api&h=220&P=0">
-            <p>Sanhok</p>
-        </div>
-        <div class="card">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.7WP3lOL9n6T9veVFAKpU5QHaHa?pid=Api&h=220&P=0">
-            <p>Vikendi</p>
-        </div>
-    </div>
+<div class="grid">
+
+<div class="card">
+<img src="https://zilliongamer.com/uploads/pubg-mobile/map-location-information/pubg-mobile-erangel.jpg">
+<h3>Erangel</h3>
+<p>
+Erangel is the original PUBG map featuring military bases, cities, forests, and open fields. It is balanced for all playstyles and remains one of the most iconic maps in the game.
+</p>
 </div>
 
-<!-- TIPS -->
+<div class="card">
+<img src="https://tse1.mm.bing.net/th/id/OIP.hayInHV0e39nX66MvpNzlQHaHa?pid=Api&h=220&P=0">
+<h3>Miramar</h3>
+<p>
+Miramar is a large desert map filled with mountains, long roads, and sniper-friendly terrain. Long-range combat and smart positioning are important to survive on this map.
+</p>
+</div>
+
+<div class="card">
+<img src="https://tse2.mm.bing.net/th/id/OIP.h_E0FTEaBqtql15eo27QYQHaEU?pid=Api&h=220&P=0">
+<h3>Sanhok</h3>
+<p>
+Sanhok is a smaller tropical jungle map focused on fast-paced action and quick encounters. Dense forests and compact zones make every match intense and aggressive.
+</p>
+</div>
+
+<div class="card">
+<img src="https://tse3.mm.bing.net/th/id/OIP.7WP3lOL9n6T9veVFAKpU5QHaHa?pid=Api&h=220&P=0">
+<h3>Vikendi</h3>
+<p>
+Vikendi is a snowy map featuring icy landscapes, frozen lakes, and unique winter environments. Players must adapt carefully because footprints in the snow can reveal enemy locations.
+</p>
+</div>
+
+</div>
+</div>
+
 <div id="tips" class="page">
-    <h2>Tips</h2>
-    <ul>
-        <li>Stay inside the safe zone</li>
-        <li>Use headphones</li>
-        <li>Play smart</li>
-        <li>Rotate early</li>
-    </ul>
+<h2>Tips</h2>
+
+<ul>
+<li>Stay inside the safe zone to avoid taking damage from the blue zone.</li>
+<li>Use headphones to hear footsteps, gunshots, and enemy movement clearly.</li>
+<li>Always carry healing items, ammo, and grenades before entering fights.</li>
+<li>Rotate early and avoid getting trapped outside the circle.</li>
+<li>Use cover like rocks, trees, and buildings during gunfights.</li>
+<li>Communicate with teammates and share information during matches.</li>
+</ul>
+
 </div>
 
 </div>
 
 <script>
 function showPage(id) {
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+document.getElementById(id).classList.add("active");
 }
 </script>
 
